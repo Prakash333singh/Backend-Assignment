@@ -1,13 +1,13 @@
-FROM node:16
+FROM node:16-alpine
 
 # Set working directory
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy package files
-COPY package.json .
+COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies and nodemon globally
+RUN npm install && npm install -g nodemon
 
 # Copy project files
 COPY . .
@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 8000
 
 # Start the application
-CMD ["node", "app.js"]
+CMD ["npm", "run", "dev"]

@@ -16,11 +16,13 @@
   "description": "Multilingual FAQ backend with automatic translation",
   "dependencies": {
     "@google-cloud/translate": "^8.5.0",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "ioredis": "^5.4.2",
     "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5",
     "redis": "^4.7.0"
   },
@@ -31,6 +33,8 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "setupFiles": ["./jest.setup.js"]
+    "setupFiles": [
+      "./jest.setup.js"
+    ]
   }
 }

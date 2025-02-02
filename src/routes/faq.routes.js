@@ -21,6 +21,5 @@ router.put('/:id', async (req, res, next) => {
 }, faqController.updateFAQ); 
 
 router.delete('/:id', faqController.deleteFAQ);
-console.log("faqController:", faqController)
 
 module.exports = router;
